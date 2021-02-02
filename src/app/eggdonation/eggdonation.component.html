@@ -10,132 +10,15 @@
       <tr>
         <mat-form-field appearance="outline">
           <mat-label>First Name</mat-label>
-          <input matInput formControlName="firstName" required>
+          <input matInput formControlName="firstName" maxlength="50" required>
           <mat-error *ngIf="form.controls['firstName'].errors?.required">This field is required.</mat-error>
         </mat-form-field>
       </tr>
       <tr>
         <mat-form-field appearance="outline">
           <mat-label>Last Name</mat-label>
-          <input matInput formControlName="lastName" required>
+          <input matInput formControlName="lastName" maxlength="50" required>
           <mat-error *ngIf="form.controls['lastName'].errors?.required">This field is required.</mat-error>
-        </mat-form-field>
-      </tr>
-      <tr>
-        <mat-form-field appearance="outline">
-          <mat-label>Street Address</mat-label>
-          <input matInput formControlName="streetAdd" required>
-          <mat-error *ngIf="form.controls['streetAdd'].errors?.required">This field is required.</mat-error>
-        </mat-form-field>
-      </tr>
-      <tr>
-        <mat-form-field appearance="outline">
-          <mat-label>City</mat-label>
-          <input matInput formControlName="city" required>
-          <mat-error *ngIf="form.controls['city'].errors?.required">This field is required.</mat-error>
-        </mat-form-field>
-      </tr>
-      <tr>
-        <mat-form-field appearance="outline">
-          <mat-label>State</mat-label>
-          <mat-select formControlName="state" required>
-            <mat-option value="Alabama">AL</mat-option>
-            <mat-option value="Alaska">AK</mat-option>
-            <mat-option value="Arizona">AZ</mat-option>
-            <mat-option value="Arkansas">AR</mat-option>
-            <mat-option value="California">CA</mat-option>
-            <mat-option value="Colorado">CO</mat-option>
-            <mat-option value="Connecticut">CT</mat-option>
-            <mat-option value="Delaware">DE</mat-option>
-            <mat-option value="Florida">FL</mat-option>
-            <mat-option value="Georgia">GA</mat-option>
-            <mat-option value="Hawaii">HI</mat-option>
-            <mat-option value="Idaho">ID</mat-option>
-            <mat-option value="Illinois">IL</mat-option>
-            <mat-option value="Indiana">IN</mat-option>
-            <mat-option value="Iowa">IA</mat-option>
-            <mat-option value="Kansas">KS</mat-option>
-            <mat-option value="Kentucky">KY</mat-option>
-            <mat-option value="Louisiana">LA</mat-option>
-            <mat-option value="Maine">ME</mat-option>
-            <mat-option value="Maryland ">MD</mat-option>
-            <mat-option value="Massachusetts">MA</mat-option>
-            <mat-option value="Michigan">MI</mat-option>
-            <mat-option value="Minnesota">MN</mat-option>
-            <mat-option value="Mississippi">MS</mat-option>
-            <mat-option value="Missouri">MO</mat-option>
-            <mat-option value="Montana">MT</mat-option>
-            <mat-option value="Nebraska">NE</mat-option>
-            <mat-option value="Nevada">NV</mat-option>
-            <mat-option value="New Hampshire">NH</mat-option>
-            <mat-option value="New Jersey">NJ</mat-option>
-            <mat-option value="New Mexico">NM</mat-option>
-            <mat-option value="New York">NY</mat-option>
-            <mat-option value="North Carolina">NC</mat-option>
-            <mat-option value="North Dakota">ND</mat-option>
-            <mat-option value="Ohio">OH</mat-option>
-            <mat-option value="Oklahoma">OK</mat-option>
-            <mat-option value="Oregon">OR</mat-option>
-            <mat-option value="Pennsylvania">PA</mat-option>
-            <mat-option value="Rhode Island">RI</mat-option>
-            <mat-option value="Rhode Island">SC</mat-option>
-            <mat-option value="South Dakota">SD</mat-option>
-            <mat-option value="Tennessee">TN</mat-option>
-            <mat-option value="Texas">TX</mat-option>
-            <mat-option value="Utah">UT</mat-option>
-            <mat-option value="Vermont">VT</mat-option>
-            <mat-option value="Virginia">VA</mat-option>
-            <mat-option value="Washington">WA</mat-option>
-            <mat-option value="West Virginia">WV</mat-option>
-            <mat-option value="Wisconsin">WI</mat-option>
-            <mat-option value="Wyoming">WY</mat-option>
-          </mat-select>
-          <mat-error *ngIf="form.controls['state'].errors?.required">This field is required.</mat-error>
-        </mat-form-field>
-      </tr>
-      <tr>
-        <mat-form-field appearance="outline">
-          <mat-label>Please indicate if outside 0f USA.</mat-label>
-          <textarea matInput formControlName="outside_USA"></textarea>
-        </mat-form-field>
-      </tr>
-      <tr>
-        <mat-form-field appearance="outline">
-          <mat-label>Please provide your city and country of residence</mat-label>
-          <textarea matInput formControlName="city_country_residence" required></textarea>
-          <mat-error *ngIf="form.controls['city_country_residence'].errors?.required">This field is required.</mat-error>
-        </mat-form-field>
-      </tr>
-      <tr>
-        <mat-form-field appearance="outline">
-          <mat-label>Zip Code</mat-label>
-          <input matInput formControlName="zip_code" required>
-          <mat-error *ngIf="form.controls['zip_code'].errors?.required">This field is required.</mat-error>
-        </mat-form-field>
-      </tr>
-      <tr>
-        <mat-form-field appearance="outline">
-          <mat-label>Primary telephone number (include area code) to use for contact and leaving messages</mat-label>
-          <input matInput formControlName="telephone_number" required>
-          <mat-error *ngIf="form.controls['telephone_number'].errors?.required">This field is required.</mat-error>
-        </mat-form-field>
-      </tr>
-      <tr>
-        <mat-form-field appearance="outline">
-          <mat-label>Preferred method of contact</mat-label>
-          <mat-select formControlName="contact_method" required>
-            <mat-option value="Phone">Phone</mat-option>
-            <mat-option value="Email">Email</mat-option>
-            <mat-option value="Text">Text</mat-option>
-            <mat-option value="Others">Others</mat-option>
-          </mat-select>
-          <mat-error *ngIf="form.controls['contact_method'].errors?.required">This field is required.</mat-error>
-        </mat-form-field>
-      </tr>
-      <tr>
-        <mat-form-field appearance="outline">
-          <mat-label>Please indicate "Others".</mat-label>
-          <textarea matInput formControlName="others_contact_method"></textarea>
         </mat-form-field>
       </tr>
       <tr>
@@ -149,8 +32,134 @@
       </tr>
       <tr>
         <mat-form-field appearance="outline">
+          <mat-label>Street Address</mat-label>
+          <input matInput formControlName="streetAdd" maxlength="500">
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>City</mat-label>
+          <input matInput formControlName="city" maxlength="500">
+        </mat-form-field>
+      </tr>
+      <tr>
+        <table>
+          <td>
+            <tr>
+              <mat-form-field class="my-class" appearance="outline">
+                <mat-label>State</mat-label>
+                <mat-select formControlName="state">
+                  <mat-option value="Alabama">AL</mat-option>
+                  <mat-option value="Alaska">AK</mat-option>
+                  <mat-option value="Arizona">AZ</mat-option>
+                  <mat-option value="Arkansas">AR</mat-option>
+                  <mat-option value="California">CA</mat-option>
+                  <mat-option value="Colorado">CO</mat-option>
+                  <mat-option value="Connecticut">CT</mat-option>
+                  <mat-option value="Delaware">DE</mat-option>
+                  <mat-option value="Florida">FL</mat-option>
+                  <mat-option value="Georgia">GA</mat-option>
+                  <mat-option value="Hawaii">HI</mat-option>
+                  <mat-option value="Idaho">ID</mat-option>
+                  <mat-option value="Illinois">IL</mat-option>
+                  <mat-option value="Indiana">IN</mat-option>
+                  <mat-option value="Iowa">IA</mat-option>
+                  <mat-option value="Kansas">KS</mat-option>
+                  <mat-option value="Kentucky">KY</mat-option>
+                  <mat-option value="Louisiana">LA</mat-option>
+                  <mat-option value="Maine">ME</mat-option>
+                  <mat-option value="Maryland ">MD</mat-option>
+                  <mat-option value="Massachusetts">MA</mat-option>
+                  <mat-option value="Michigan">MI</mat-option>
+                  <mat-option value="Minnesota">MN</mat-option>
+                  <mat-option value="Mississippi">MS</mat-option>
+                  <mat-option value="Missouri">MO</mat-option>
+                  <mat-option value="Montana">MT</mat-option>
+                  <mat-option value="Nebraska">NE</mat-option>
+                  <mat-option value="Nevada">NV</mat-option>
+                  <mat-option value="New Hampshire">NH</mat-option>
+                  <mat-option value="New Jersey">NJ</mat-option>
+                  <mat-option value="New Mexico">NM</mat-option>
+                  <mat-option value="New York">NY</mat-option>
+                  <mat-option value="North Carolina">NC</mat-option>
+                  <mat-option value="North Dakota">ND</mat-option>
+                  <mat-option value="Ohio">OH</mat-option>
+                  <mat-option value="Oklahoma">OK</mat-option>
+                  <mat-option value="Oregon">OR</mat-option>
+                  <mat-option value="Pennsylvania">PA</mat-option>
+                  <mat-option value="Rhode Island">RI</mat-option>
+                  <mat-option value="Rhode Island">SC</mat-option>
+                  <mat-option value="South Dakota">SD</mat-option>
+                  <mat-option value="Tennessee">TN</mat-option>
+                  <mat-option value="Texas">TX</mat-option>
+                  <mat-option value="Utah">UT</mat-option>
+                  <mat-option value="Vermont">VT</mat-option>
+                  <mat-option value="Virginia">VA</mat-option>
+                  <mat-option value="Washington">WA</mat-option>
+                  <mat-option value="West Virginia">WV</mat-option>
+                  <mat-option value="Wisconsin">WI</mat-option>
+                  <mat-option value="Wyoming">WY</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </tr>
+          </td>
+          <td>
+            <tr>
+              <mat-form-field class="my-class" appearance="outline">
+                <mat-label>State</mat-label>
+                <input matInput formControlName="state_fill">
+              </mat-form-field>
+            </tr>
+          </td>
+        </table>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Please indicate if outside of USA</mat-label>
+          <textarea matInput formControlName="outside_USA" maxlength="500"></textarea>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Please provide your city and country of residence</mat-label>
+          <textarea matInput formControlName="city_country_residence" required maxlength="500"></textarea>
+          <mat-error *ngIf="form.controls['city_country_residence'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Zip Code</mat-label>
+          <input matInput formControlName="zip_code" maxlength="50">
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Primary telephone number (include area code) to use for contact and leaving messages</mat-label>
+          <input matInput formControlName="telephone_number" maxlength="50" required>
+          <mat-error *ngIf="form.controls['telephone_number'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Preferred method of contact</mat-label>
+          <mat-select formControlName="contact_method">
+            <mat-option value="Phone">Phone</mat-option>
+            <mat-option value="Email">Email</mat-option>
+            <mat-option value="Text">Text</mat-option>
+            <mat-option value="Others">Others</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Please indicate "Others"</mat-label>
+          <textarea matInput formControlName="others_contact_method" maxlength="500"></textarea>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
           <mat-label>Are you an experienced egg donor?</mat-label>
-          <mat-select formControlName="experience" required>
+          <mat-select formControlName="experience">
             <mat-option value="Yes">Yes</mat-option>
             <mat-option value="No">No</mat-option>
           </mat-select>
@@ -159,38 +168,61 @@
       <tr>
         <mat-form-field appearance="outline">
           <mat-label>The closest description of your race</mat-label>
-          <input matInput formControlName="race" required>
-          <mat-error *ngIf="form.controls['race'].errors?.required">This field is required.</mat-error>
+          <input matInput formControlName="race" maxlength="500">
         </mat-form-field>
       </tr>
       <tr>
         <mat-form-field appearance="outline">
-          <mat-label>Are you or any of your family member registered to the BIA (Bureau of Indian Aairs)?</mat-label>
-          <mat-select formControlName="registered_BIA" required>
+          <mat-label>Are you or any of your family member registered to the BIA (Bureau of Indian Affairs)?</mat-label>
+          <mat-select [formControl]="registered_BIA" required>
             <mat-option value="Yes">Yes</mat-option>
             <mat-option value="No">No</mat-option>
             <mat-option value="N/A">N/A</mat-option>
           </mat-select>
+          <mat-error *ngIf="registered_BIA.hasError('required')">This field is required.</mat-error>
         </mat-form-field>
       </tr>
       <tr>
-        <mat-form-field appearance="outline">
-          <mat-label>Height</mat-label>
-          <input matInput formControlName="height" required>
-          <mat-error *ngIf="form.controls['height'].errors?.required">This field is required.</mat-error>
-        </mat-form-field>
+        <table>
+          <td>
+            <tr>
+              <mat-form-field class="my-class" appearance="outline">
+                <mat-label>Height</mat-label>
+                <input matInput type="number" min="1" maxlength="50" formControlName="height_feet" required>
+                <span matSuffix> feet</span>
+                <mat-error *ngIf="form.controls['height_feet'].errors?.required">This field is required.</mat-error>
+              </mat-form-field>
+            </tr>
+          </td>
+          <td>
+            <tr>
+              <mat-form-field class="my-class" appearance="outline">
+                <mat-label>Height</mat-label>
+                <input matInput type="number" min="1" maxlength="50" formControlName="height_in" required>
+                <span matSuffix> in</span>
+                <mat-error *ngIf="form.controls['height_in'].errors?.required">This field is required.</mat-error>
+              </mat-form-field>
+            </tr>
+          </td>
+        </table>
       </tr>
       <tr>
         <mat-form-field appearance="outline">
           <mat-label>Weight</mat-label>
-          <input matInput formControlName="weight" required>
+          <input matInput formControlName="weight" maxlength="50" required>
+          <span matSuffix>pounds</span>
           <mat-error *ngIf="form.controls['weight'].errors?.required">This field is required.</mat-error>
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label>BMI: </mat-label>
+        <!-- <p>BMI: {{bmi}}</p> -->
+      </tr>
+      <br>
+      <tr>
         <mat-form-field appearance="outline">
           <mat-label>Eye Color</mat-label>
-          <mat-select formControlName="eye_color" required>
+          <mat-select [formControl]="eye_color" required>
             <mat-option value="Blue">Blue</mat-option>
             <mat-option value="Light Blue">Light Blue</mat-option>
             <mat-option value="Dark Blue">Dark Blue</mat-option>
@@ -200,13 +232,13 @@
             <mat-option value="Green">Green</mat-option>
             <mat-option value="Hazel">Hazel</mat-option>
           </mat-select>
-          <mat-error *ngIf="form.controls['eye_color'].errors?.required">This field is required.</mat-error>
+          <mat-error *ngIf="eye_color.hasError('required')">This field is required.</mat-error>
         </mat-form-field>
       </tr>
       <tr>
         <mat-form-field appearance="outline">
           <mat-label>Natural Hair Color</mat-label>
-          <mat-select formControlName="hair_color" required>
+          <mat-select [formControl]="hair_color" required>
             <mat-option value="Black">Black</mat-option>
             <mat-option value="Blonde">Blonde</mat-option>
             <mat-option value="Light Blonde">Light Blonde</mat-option>
@@ -217,13 +249,13 @@
             <mat-option value="Dark Brown">Dark Brown</mat-option>
             <mat-option value="Red">Red</mat-option>
           </mat-select>
-          <mat-error *ngIf="form.controls['hair_color'].errors?.required">This field is required.</mat-error>
+          <mat-error *ngIf="hair_color.hasError('required')">This field is required.</mat-error>
         </mat-form-field>
       </tr>
       <tr>
         <mat-form-field appearance="outline">
           <mat-label>Blood Type</mat-label>
-          <mat-select formControlName="bloodType" required>
+          <mat-select [formControl]="bloodType" required>
             <mat-option value="A-">A-</mat-option>
             <mat-option value="A+">A+</mat-option>
             <mat-option value="B-">B-</mat-option>
@@ -234,31 +266,31 @@
             <mat-option value="O+">O+</mat-option>
             <mat-option value="Unknown">Unknown</mat-option>
           </mat-select>
-          <mat-error *ngIf="form.controls['bloodType'].errors?.required">This field is required.</mat-error>
+          <mat-error *ngIf="bloodType.hasError('required')">This field is required.</mat-error>
         </mat-form-field>
       </tr>
       <tr>
         <mat-form-field appearance="outline">
           <mat-label>Have you ever used medications such as antianxiety or antidepressants to treat an emotional or psychological problem?</mat-label>
-          <mat-select formControlName="medications" required>
+          <mat-select [formControl]="medications" required>
             <mat-option value="No">No</mat-option>
             <mat-option value="Yes – current">Yes – current</mat-option>
             <mat-option value="Yes - used within the past 12 months">Yes - used within the past 12 months</mat-option>
             <mat-option value="Yes - used over 12 months ago">Yes - used over 12 months ago</mat-option>
           </mat-select>
-          <mat-error *ngIf="form.controls['medications'].errors?.required">This field is required.</mat-error>
+          <mat-error *ngIf="medications.hasError('required')">This field is required.</mat-error>
         </mat-form-field>
       </tr>
       <tr>
         <mat-form-field appearance="outline">
           <mat-label>If yes, please list why and date last used</mat-label>
-          <textarea matInput formControlName="why_date_last_used"></textarea>
+          <textarea matInput formControlName="why_date_last_used" maxlength="500"></textarea>
         </mat-form-field>
       </tr>
       <tr>
         <div class="add-bottom-padding">
           <label>Do you have biological children?</label><br><br>
-          <mat-radio-group formControlName="bioChildren" required>
+          <mat-radio-group formControlName="bioChildren">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
@@ -266,14 +298,14 @@
       </tr>
       <tr>
         <mat-form-field appearance="outline">
-          <mat-label>If yes, please list ages of children.</mat-label>
-          <textarea matInput formControlName="list_ages_children"></textarea>
+          <mat-label>If yes, please list ages of children</mat-label>
+          <textarea matInput formControlName="list_ages_children" maxlength="500"></textarea>
         </mat-form-field>
       </tr>
       <tr>
         <mat-form-field appearance="outline">
           <mat-label>How did you hear about us?</mat-label>
-          <mat-select formControlName="hear_about_us" required>
+          <mat-select formControlName="hear_about_us">
             <mat-option value="Personal Referral (Provide Name)">Personal Referral (Provide Name)</mat-option>
             <mat-option value="A Friend (Provide Name)">A Friend (Provide Name)</mat-option>
             <mat-option value="Recruiter (Provide Name)">Recruiter (Provide Name)</mat-option>
@@ -302,14 +334,14 @@
       </tr>
       <tr>
         <mat-form-field appearance="outline">
-          <mat-label>Please explain.</mat-label>
-          <textarea matInput formControlName="explain_about_us"></textarea>
+          <mat-label>Please explain</mat-label>
+          <textarea matInput formControlName="explain_about_us" maxlength="5000"></textarea>
         </mat-form-field>
       </tr>
       <tr>
         <mat-form-field appearance="outline">
           <mat-label>Please select your highest level of education</mat-label>
-          <mat-select formControlName="highest_level_education" required>
+          <mat-select [formControl]="highest_level_education" required>
             <mat-option value="None">None</mat-option>
             <mat-option value="Some High School">Some High School</mat-option>
             <mat-option value="GED">GED</mat-option>
@@ -326,36 +358,35 @@
             <mat-option value="MD or DO Degree">MD or DO Degree</mat-option>
             <mat-option value="Other">Other</mat-option>
           </mat-select>
+          <mat-error *ngIf="highest_level_education.hasError('required')">This field is required.</mat-error>
         </mat-form-field>
       </tr>
       <tr>
         <mat-form-field appearance="outline">
-          <mat-label>Please explain "Other".</mat-label>
-          <textarea matInput formControlName="explain_other"></textarea>
+          <mat-label>Please explain "Other"</mat-label>
+          <textarea matInput formControlName="explain_other" maxlength="5000"></textarea>
         </mat-form-field>
       </tr>
       <tr>
         <mat-form-field appearance="outline">
-          <mat-label>Do you or any family member have a history of disease or tested positive as a carrier? If yes, please list.</mat-label>
-          <input matInput formControlName="yes_positive_carrier" required>
-          <mat-error *ngIf="form.controls['yes_positive_carrier'].errors?.required">This field is required.</mat-error>
+          <mat-label>Do you or any family member have a history of disease or tested positive as a carrier? If yes, please list</mat-label>
+          <input matInput formControlName="yes_positive_carrier" maxlength="5000">
         </mat-form-field>
       </tr>
       <tr>
         <mat-form-field appearance="outline">
           <mat-label>Preferred Language</mat-label>
-          <mat-select formControlName="preferred_languange" required>
+          <mat-select formControlName="preferred_languange">
             <mat-option value="Engish">English</mat-option>
             <mat-option value="Chinese">Chinese</mat-option>
             <mat-option value="Others">Others</mat-option>
           </mat-select>
-          <mat-error *ngIf="form.controls['preferred_languange'].errors?.required">This field is required.</mat-error>
         </mat-form-field>
       </tr>
       <tr>
         <mat-form-field appearance="outline">
-          <mat-label>Please indicate "Others".</mat-label>
-          <textarea matInput formControlName="others_languange"></textarea>
+          <mat-label>Please indicate "Others"</mat-label>
+          <textarea matInput formControlName="others_languange" maxlength="500"></textarea>
         </mat-form-field>
       </tr>
     </td>
