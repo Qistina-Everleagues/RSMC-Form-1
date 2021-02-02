@@ -9,12 +9,12 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class EggdonationComponent implements OnInit {
 
   showForm: boolean = true;
-  registered_BIA = new FormControl('', [Validators.required]);
-  eye_color = new FormControl('', [Validators.required]);
-  hair_color = new FormControl('', [Validators.required]);
-  bloodType = new FormControl('', [Validators.required]);
-  medications = new FormControl('', [Validators.required]);
-  highest_level_education = new FormControl('', [Validators.required]);
+  registered_BIA = new FormControl(0, [Validators.required]);
+  eye_color = new FormControl(0, [Validators.required]);
+  hair_color = new FormControl(0, [Validators.required]);
+  bloodType = new FormControl(0, [Validators.required]);
+  medications = new FormControl(0, [Validators.required]);
+  highest_level_education = new FormControl(0, [Validators.required]);
 
   form: FormGroup = new FormGroup ({
     firstName: new FormControl('', Validators.required),
