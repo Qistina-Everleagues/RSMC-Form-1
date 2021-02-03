@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
-export interface BIA {
-  name: string;
-}
-
 @Component({
   selector: 'app-eggdonation',
   templateUrl: './eggdonation.component.html',
@@ -12,15 +8,9 @@ export interface BIA {
 })
 export class EggdonationComponent implements OnInit {
 
-  registered_BIA = new FormControl('', [Validators.required]);
-  bias: BIA[] = [
-    {name: 'Yes'},
-    {name: 'No'},
-    {name: 'N/A'}
-  ];
-
   showForm: boolean = true;
   eye_color = new FormControl('', [Validators.required]);
+  registered_BIA = new FormControl('', [Validators.required]);
   hair_color = new FormControl('', [Validators.required]);
   bloodType = new FormControl('', [Validators.required]);
   medications = new FormControl('', [Validators.required]);
