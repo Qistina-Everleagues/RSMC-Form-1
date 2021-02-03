@@ -22,7 +22,7 @@ export class EggdonationComponent implements OnInit {
     streetAdd: new FormControl(''),
     city: new FormControl(''),
     state: new FormControl(0),
-    state_fill: new FormControl(''),
+    foreign: new FormControl(''),
     outside_USA: new FormControl(''),
     city_country_residence: new FormControl('', Validators.required),
     zip_code: new FormControl(''),
