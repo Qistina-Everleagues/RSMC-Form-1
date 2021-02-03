@@ -175,9 +175,10 @@
         <mat-form-field appearance="outline">
           <mat-label>Are you or any of your family member registered to the BIA (Bureau of Indian Affairs)?</mat-label>
           <mat-select [formControl]="registered_BIA" required>
-            <mat-option value="Yes">Yes</mat-option>
+            <mat-option *ngFor="let bia of bias" [value]="bia">{{bia.name}}</mat-option>
+            <!-- <mat-option value="Yes">Yes</mat-option>
             <mat-option value="No">No</mat-option>
-            <mat-option value="N/A">N/A</mat-option>
+            <mat-option value="N/A">N/A</mat-option> -->
           </mat-select>
           <mat-error *ngIf="registered_BIA.hasError('required')">This field is required.</mat-error>
         </mat-form-field>
