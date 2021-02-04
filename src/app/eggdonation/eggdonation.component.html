@@ -111,47 +111,32 @@
           </td>
           <td>
             <tr>
-              <mat-label><b>7. Foreign Province</b></mat-label><br>
+              <mat-label><b>7. Please indicate if outside of USA</b></mat-label><br>
               <mat-form-field style="margin-left: 15px;" class="my-class" appearance="outline">
-                <mat-label>Foreign Province</mat-label>
-                <input matInput formControlName="foreign">
+                <mat-label>Please indicate if outside of USA</mat-label>
+                <input matInput formControlName="outside_USA" maxlength="500">
               </mat-form-field>
             </tr>
           </td>
         </table>
       </tr>
       <tr>
-        <mat-label><b>8. Please indicate if outside of USA</b></mat-label><br>
-        <mat-form-field style="margin-left: 15px;" appearance="outline">
-          <mat-label>Please indicate if outside of USA</mat-label>
-          <textarea matInput formControlName="outside_USA" maxlength="500"></textarea>
-        </mat-form-field>
-      </tr>
-      <tr>
-        <mat-label><b>9. Please provide your city and country of residence</b></mat-label><br>
-        <mat-form-field style="margin-left: 15px;" appearance="outline">
-          <mat-label>Please provide your city and country of residence</mat-label>
-          <textarea matInput formControlName="city_country_residence" required maxlength="500"></textarea>
-          <mat-error *ngIf="form.controls['city_country_residence'].errors?.required">This field is required.</mat-error>
-        </mat-form-field>
-      </tr>
-      <tr>
-        <mat-label><b>10. Zip Code</b></mat-label><br>
-        <mat-form-field class="my-class" appearance="outline">
+        <mat-label><b>8. Zip Code</b></mat-label><br>
+        <mat-form-field style="margin-left: 15px;" class="my-class" appearance="outline">
           <mat-label>Zip Code</mat-label>
           <input matInput formControlName="zip_code" maxlength="50">
         </mat-form-field>
       </tr>
       <tr>
-        <mat-label><b>11. Primary telephone number (include area code) to use for contact and leaving messages</b></mat-label><br>
-        <mat-form-field appearance="outline">
+        <mat-label><b>9. Primary telephone number (include area code) to use for contact and leaving messages</b></mat-label><br>
+        <mat-form-field style="margin-left: 15px;" appearance="outline">
           <mat-label>Primary telephone number (include area code) to use for contact and leaving messages</mat-label>
           <input matInput formControlName="telephone_number" maxlength="50" required>
           <mat-error *ngIf="form.controls['telephone_number'].errors?.required">This field is required.</mat-error>
         </mat-form-field>
       </tr>
       <tr>
-        <mat-label><b>12. Preferred method of contact</b></mat-label><br>
+        <mat-label><b>10. Preferred method of contact</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Preferred method of contact</mat-label>
           <mat-select formControlName="contact_method">
@@ -163,14 +148,14 @@
         </mat-form-field>
       </tr>
       <tr>
-        <mat-label><b>13. Please indicate "Others"</b></mat-label><br>
+        <mat-label><b>11. Please indicate "Others"</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Please indicate "Others"</mat-label>
           <textarea matInput formControlName="others_contact_method" maxlength="500"></textarea>
         </mat-form-field>
       </tr>
       <tr>
-        <mat-label><b>14. Are you an experienced egg donor?</b></mat-label><br>
+        <mat-label><b>12. Are you an experienced egg donor?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Are you an experienced egg donor?</mat-label>
           <mat-select formControlName="experience">
@@ -180,14 +165,14 @@
         </mat-form-field>
       </tr>
       <tr>
-        <mat-label><b>15. The closest description of your race</b></mat-label><br>
+        <mat-label><b>13. The closest description of your race</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>The closest description of your race</mat-label>
           <input matInput formControlName="race" maxlength="500">
         </mat-form-field>
       </tr>
       <tr>
-        <mat-label><b>16. Are you or any of your family member registered to the BIA (Bureau of Indian Affairs)?</b></mat-label><br>
+        <mat-label><b>14. Are you or any of your family member registered to the BIA (Bureau of Indian Affairs)?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Are you or any of your family member registered to the BIA (Bureau of Indian Affairs)?</mat-label>
           <mat-select [formControl]="registered_BIA" required>
@@ -202,7 +187,7 @@
         <table>
           <td>
             <tr>
-              <mat-label><b>17. Height (feet)</b></mat-label><br>
+              <mat-label><b>15. Height (feet)</b></mat-label><br>
               <mat-form-field class="my-class" appearance="outline">
                 <mat-label>Height</mat-label>
                 <input matInput type="number" min="1" maxlength="50" formControlName="height_feet" required>
@@ -213,7 +198,7 @@
           </td>
           <td>
             <tr>
-              <mat-label><b>18. Height (inches)</b></mat-label><br>
+              <mat-label><b>16. Height (inches)</b></mat-label><br>
               <mat-form-field class="my-class" appearance="outline">
                 <mat-label>Height</mat-label>
                 <input matInput type="number" min="1" maxlength="50" formControlName="height_in" required>
@@ -225,7 +210,7 @@
         </table>
       </tr>
       <tr>
-        <mat-label><b>19. Weight</b></mat-label><br>
+        <mat-label><b>17. Weight</b></mat-label><br>
         <mat-form-field class="my-class" appearance="outline">
           <mat-label>Weight</mat-label>
           <input matInput formControlName="weight" maxlength="50" required>
@@ -234,7 +219,7 @@
         </mat-form-field>
       </tr>
       <tr>
-        <mat-label><b>20. Eye Color</b></mat-label><br>
+        <mat-label><b>18. Eye Color</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Eye Color</mat-label>
           <mat-select [formControl]="eye_color" required>
@@ -251,7 +236,7 @@
         </mat-form-field>
       </tr>
       <tr>
-        <mat-label><b>21. Natural Hair Color</b></mat-label><br>
+        <mat-label><b>19. Natural Hair Color</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Natural Hair Color</mat-label>
           <mat-select [formControl]="hair_color" required>
@@ -269,7 +254,7 @@
         </mat-form-field>
       </tr>
       <tr>
-        <mat-label><b>22. Blood Type</b></mat-label><br>
+        <mat-label><b>20. Blood Type</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Blood Type</mat-label>
           <mat-select [formControl]="bloodType" required>
@@ -287,7 +272,7 @@
         </mat-form-field>
       </tr>
       <tr>
-        <mat-label><b>23. Have you ever used medications such as antianxiety or antidepressants to treat an emotional or psychological problem?</b></mat-label><br>
+        <mat-label><b>21. Have you ever used medications such as antianxiety or antidepressants to treat an emotional or psychological problem?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Have you ever used medications such as antianxiety or antidepressants to treat an emotional or psychological problem?</mat-label>
           <mat-select [formControl]="medications" required>
@@ -300,15 +285,15 @@
         </mat-form-field>
       </tr>
       <tr>
-        <mat-label><b>24. If yes, please list why and date last used</b></mat-label><br>
+        <mat-label><b>22. If yes, please list why and date last used</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>If yes, please list why and date last used</mat-label>
-          <textarea matInput formControlName="why_date_last_used" maxlength="500"></textarea>
+          <textarea matInput formControlName="why_date_last_used" maxlength="5000"></textarea>
         </mat-form-field>
       </tr>
       <tr>
         <div class="add-bottom-padding">
-          <label><b>25. Do you have biological children?</b></label><br><br>
+          <label><b>23. Do you have biological children?</b></label><br><br>
           <mat-radio-group style="margin-left: 20px;" formControlName="bioChildren">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
@@ -317,14 +302,14 @@
       </tr>
       <br>
       <tr>
-        <label><b>26. If yes, please list ages of children</b></label><br>
+        <label><b>24. If yes, please list ages of children</b></label><br>
         <mat-form-field appearance="outline">
           <mat-label>If yes, please list ages of children</mat-label>
           <textarea matInput formControlName="list_ages_children" maxlength="500"></textarea>
         </mat-form-field>
       </tr>
       <tr>
-        <label><b>27. How did you hear about us?</b></label><br>
+        <label><b>25. How did you hear about us?</b></label><br>
         <mat-form-field appearance="outline">
           <mat-label>How did you hear about us?</mat-label>
           <mat-select formControlName="hear_about_us">
@@ -355,14 +340,14 @@
         </mat-form-field>
       </tr>
       <tr>
-        <label><b>28. Please explain</b></label><br>
+        <label><b>26. Please explain</b></label><br>
         <mat-form-field appearance="outline">
           <mat-label>Please explain</mat-label>
           <textarea matInput formControlName="explain_about_us" maxlength="5000"></textarea>
         </mat-form-field>
       </tr>
       <tr>
-        <label><b>29. Please select your highest level of education</b></label><br>
+        <label><b>27. Please select your highest level of education</b></label><br>
         <mat-form-field appearance="outline">
           <mat-label>Please select your highest level of education</mat-label>
           <mat-select [formControl]="highest_level_education" required>
@@ -386,21 +371,21 @@
         </mat-form-field>
       </tr>
       <tr>
-        <label><b>30. Please explain "Other"</b></label><br>
+        <label><b>28. Please explain "Other"</b></label><br>
         <mat-form-field appearance="outline">
           <mat-label>Please explain "Other"</mat-label>
           <textarea matInput formControlName="explain_other" maxlength="5000"></textarea>
         </mat-form-field>
       </tr>
       <tr>
-        <label><b>31. Do you or any family member have a history of disease or tested positive as a carrier? If yes, please list</b></label><br>
+        <label><b>29. Do you or any family member have a history of disease or tested positive as a carrier? If yes, please list</b></label><br>
         <mat-form-field appearance="outline">
           <mat-label>Do you or any family member have a history of disease or tested positive as a carrier? If yes, please list</mat-label>
-          <input matInput formControlName="yes_positive_carrier" maxlength="5000">
+          <textarea matInput formControlName="yes_positive_carrier" maxlength="5000"></textarea>
         </mat-form-field>
       </tr>
       <tr>
-        <label><b>32. Preferred Language</b></label><br>
+        <label><b>30. Preferred Language</b></label><br>
         <mat-form-field appearance="outline">
           <mat-label>Preferred Language</mat-label>
           <mat-select formControlName="preferred_languange">
@@ -411,15 +396,13 @@
         </mat-form-field>
       </tr>
       <tr>
-        <label><b>33. Please indicate "Others"</b></label><br>
+        <label><b>31. Please indicate "Others"</b></label><br>
         <mat-form-field appearance="outline">
           <mat-label>Please indicate "Others"</mat-label>
           <textarea matInput formControlName="others_languange" maxlength="500"></textarea>
         </mat-form-field>
       </tr>
     </td>
-    <!-- <td style="padding: 50px;">
-    </td> -->
   </table>
   <div style="margin-left: 30px;" class="button-row">
     <button style="margin-left: 25px;" mat-raised-button class="my-class" color="warn" type="save_progress">SAVE PROGRESS <mat-icon>save</mat-icon></button>
