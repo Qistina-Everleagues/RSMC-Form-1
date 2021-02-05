@@ -25,7 +25,6 @@ export class EggdonationComponent implements OnInit {
     outside_USA: new FormControl(''),
     zip_code: new FormControl(''),
     telephone_number: new FormControl(''),
-    others_contact_method: new FormControl(''),
     birthDate: new FormControl('', Validators.required),
     experience: new FormControl(0),
     race: new FormControl(''),
